@@ -59,7 +59,7 @@ ___
   ![Git Badge](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff&style=flat) ![GitHub Badge](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=fff&style=flat)
 
 -**📲 Hosting:**<br>
-  ![Github Page](https://img.shields.io/badge/github%20pages-23323330.svg?&logo=github&logoColor=white&style=flat)<br>
+  ![Vercel](https://img.shields.io/badge/vercel-23323330.svg?&logo=vercel&logoColor=white&style=flat)<br>
 -**📸 Screenshots:**
 
 ---
@@ -80,7 +80,7 @@ ___
   ![Git Badge](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff&style=flat) ![GitHub Badge](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=fff&style=flat)
 
 -**📲 Hosting:**<br>
-  ![Github Page](https://img.shields.io/badge/vercel-23323330.svg?&logo=vercel&logoColor=white&style=flat)<br>
+  ![Vercel](https://img.shields.io/badge/vercel-23323330.svg?&logo=vercel&logoColor=white&style=flat)<br>
 -**📸 Screenshots:**
 
 ---
