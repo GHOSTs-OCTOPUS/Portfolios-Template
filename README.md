@@ -32,11 +32,10 @@ A curated collection of **demo portfolio websites** I've built, showcasing diffe
 
 -🔗 **Live Demo:** [https://ghosts-octopus.github.io/Portfolio-Website/]
 -🧰 **Tech Used:**
-- 🖥️Languages:
+- 🖥️Languages:<br>
   ![HTML Badge](https://img.shields.io/badge/HTML-%23E34F26.svg?&logo=html5&logoColor=white&style=flat) ![CSS Badge](https://img.shields.io/badge/CSS-%231572B6.svg?&logo=css3&logoColor=white&style=flat) ![JavaScript Badge](https://img.shields.io/badge/Javascript-%23323330.svg?&logo=javascript&logoColor=%23F7DF1E&style=flat)
   
 -🎯**Version Control:** 
-    
   ![Git Badge](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff&style=flat) ![GitHub Badge](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=fff&style=flat)
 
 -**📲 Hosting:**
