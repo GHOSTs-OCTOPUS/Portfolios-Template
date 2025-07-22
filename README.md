@@ -49,17 +49,17 @@ ___
   <img align='right' src='./assets/Macbook-Air-ghosts-octopus.github.io (2).png'  width="450px" height="300"'>
 </p>
 
--🔗 **Live Demo:** [https://ghosts-octopus.github.io/Portfolio-Website/]
+-🔗 **Live Demo:** [https://ghosts-octopus.github.io/Portfolio-Website/]<br>
 -🧰 **Tech Used:**
-- 🖥️Languages:
+- 🖥️Languages:<br>
   ![HTML Badge](https://img.shields.io/badge/HTML-%23E34F26.svg?&logo=html5&logoColor=white&style=flat) ![CSS Badge](https://img.shields.io/badge/CSS-%231572B6.svg?&logo=css3&logoColor=white&style=flat) ![JavaScript Badge](https://img.shields.io/badge/Javascript-%23323330.svg?&logo=javascript&logoColor=%23F7DF1E&style=flat)
   
--🎯**Version Control:** 
+-🎯**Version Control:** <br>
     
   ![Git Badge](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff&style=flat) ![GitHub Badge](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=fff&style=flat)
 
--**📲 Hosting:**
-  ![Github Page](https://img.shields.io/badge/github%20pages-23323330.svg?&logo=github&logoColor=white&style=flat)
+-**📲 Hosting:**<br>
+  ![Github Page](https://img.shields.io/badge/github%20pages-23323330.svg?&logo=github&logoColor=white&style=flat)<br>
 -**📸 Screenshots:**
 
 ---
@@ -70,17 +70,17 @@ ___
   <img align='right' src='./assets/Macbook-Air-ghosts-octopus.github.io (3).png'  width="450px" height="300"'>
 </p>
 
--🔗 **Live Demo:** [https://ghosts-octopus.github.io/Portfolio-V3/]
+-🔗 **Live Demo:** [https://ghosts-octopus.github.io/Portfolio-V3/]<br>
 -🧰 **Tech Used:**
-- 🖥️Languages:
+- 🖥️Languages:<br>
   ![HTML Badge](https://img.shields.io/badge/HTML-%23E34F26.svg?&logo=html5&logoColor=white&style=flat) ![CSS Badge](https://img.shields.io/badge/CSS-%231572B6.svg?&logo=css3&logoColor=white&style=flat) ![JavaScript Badge](https://img.shields.io/badge/Javascript-%23323330.svg?&logo=javascript&logoColor=%23F7DF1E&style=flat)
   
--🎯**Version Control:** 
+-🎯**Version Control:** <br>
     
   ![Git Badge](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff&style=flat) ![GitHub Badge](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=fff&style=flat)
 
--**📲 Hosting:**
-  ![Github Page](https://img.shields.io/badge/github%20pages-23323330.svg?&logo=github&logoColor=white&style=flat)
+-**📲 Hosting:**<br>
+  ![Github Page](https://img.shields.io/badge/github%20pages-23323330.svg?&logo=github&logoColor=white&style=flat)<br>
 -**📸 Screenshots:**
 
 ---
