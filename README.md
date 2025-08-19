@@ -27,7 +27,7 @@ A curated collection of **demo portfolio websites** I've built, showcasing diffe
 ## 🖥️ Project Name
 ### **👨‍💻 madhurianalytics:**
 <p align='right'>
-  <img align='right' src='./assets/iPhone-13-PRO-ghosts-octopus.github.io.png'  width="250px" height="450"'>
+  <img align='right' src='./assets/iPhone-13-PRO-ghosts-octopus.github.io.png'  width="75px" height="100"'>
 </p>
 
 -🔗 **Live Demo:** [https://madhurianalytics8.netlify.app/]<br>
