@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio V1 | Freelancer Web Developer</title>
+    <!--- favicon --->
+    <link rel="shortcut icon" href="./assets/images/logo 1.webp" type="image/x-icon">
+
+    <!--- custom css link --->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!--- google font link --->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!---Preloader style--->
+    <style>
+      /* Body styles */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #121212;
+        color: white;
+        overflow-x: hidden;
+      }
+
+      /* Preloader container */
+      #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0d0d0d url('./assets/images/download.gif') center/cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease;
+        visibility: visible;
+      }
+
+      /* Add overlay for better visibility */
+      #preloader::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(13, 13, 13, 0.5);
+      }
+
+      /* Preloader text styles */
+      .preloader-text {
+        color: #ffeb3b;
+        margin-top: 20px;
+        font-size: 1.5em;
+        letter-spacing: 2px;
+        opacity: 0;
+        animation: textFade 1.5s ease-in-out infinite;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Triangle loader styles */
+      .loader-triangle-3 {
+        position: relative;
+        z-index: 1;
+      }
+
+      .loader-triangle-3 polygon {
+        stroke: #ffeb3b;
+        stroke-dasharray: 17;
+        animation: anm-tr-3-move 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+      }
+
+      /* Rest of the CSS remains the same */
+      @keyframes textFade {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 1; }
+      }
+
+      #preloader.hidden {
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      @keyframes anm-tr-3-move {
+        to {
+          stroke-dashoffset: -136;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Preloader with H1 -->
+    <div id="preloader">
+      <div class="loader-triangle-3">
+        <svg id="triangle" width="50px" height="50px" viewBox="-3 -4 39 39">
+          <polygon
+            fill="transparent"
+            stroke="#ffeb3b"
+            stroke-width="2"
+            points="16,0 32,32 0,32"
+          ></polygon>
+        </svg>
+      </div>
+      <h1 class="preloader-text">Loading Portfolio...</h1>
+    </div>
+    <!-- Preloader Script -->
+    <script>
+      const MIN_LOAD_TIME = 750;
+      const startTime = Date.now();
+
+      function hidePreloader() {
+        const remainingTime = MIN_LOAD_TIME - (Date.now() - startTime);
+        const preloader = document.getElementById("preloader");
+        
+        setTimeout(() => {
+          preloader.classList.add('hidden');
+          document.body.style.overflow = 'visible';
+        }, Math.max(remainingTime, 0));
+      }
+
+      window.addEventListener('load', () => {
+        hidePreloader();
+        document.querySelector('.content').style.opacity = '1';
+      });
+
+      if (document.readyState === 'complete') {
+        hidePreloader();
+      }
+    </script>
+
+
+    <!--- #MAIN --->
+    <main>
+
+      <!--- #SIDEBAR COMPLETE --->
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img src="./assets/images/myavatar.png" alt="Vikas Kole." width="80">
+          </figure>
+          <div class="info-content">
+            <h1 class="name" title="Vikas Kole">Vikas Kole.</h1>
+            <p class="title">Freelancer Web Developer</p><br>
+            <p class="title">UI/UX Designer</p><br>
+            <!--<p class="title">GrayHat-Hacker</p>-->
+          </div>
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
+
+        <!--- #SIDEBAR INFO --->
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+          <ul class="contacts-list">
+              <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="document-text-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">CV.devloper >></p>
+                <a href="./assets/images/VIKAS KOLE 20250824.pdf" class="contact-link">Download</a>
+                <p class="contact-title">CV.hacker >></p>
+                <a href="./assets/images/VIKAS_KOLE_CyberSecurity.pdf" class="contact-link">Download</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+                <a href="mailto:kolevikasxyz@gmail.com" class="contact-link">kolevikasxyz@gmail.com</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+                <a href="tel:+917219447058" class="contact-link">+91 7219447058</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+                <address>Pandharpur, MH, India</address>
+              </div>
+            </li>
+          </ul>
+
+          <!--- #SIDEBAR SOCIAL LINK --->
+          <div class="separator"></div>
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="https://github.com/GHOSTs-OCTOPUS" class="social-link" target="_blank">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>  
+            <li class="social-item">
+              <a href="https://www.linkedin.com/in/vikas-kole-vk786" class="social-link" target="_blank">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="https://www.instagram.com/kolevikki786" class="social-link" target="_blank">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+
+      <!--- #main-content --->
+      <div class="main-content">
+        <!--- #NAVBAR COMPLETE --->
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link active " data-nav-link>Home</button>
+            </li>
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>About</button>
+            </li>
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Resume</button>
+            </li>
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Portfolio</button>
+            </li>
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Contact</button>
+            </li>
+          </ul>
+        </nav>
+        
+
+        <!-- #HOME INCOMPLELE --> 
+        <article class="home active " data-page="home">
+          <header>
+            <h2 class="h2 article-title">Welcome..!</h2>
+          </header> 
+          <div class="movingText">
+            <marquee>
+              <B>Important Information >>></B>
+                <u>1. Portfolio Under Development..  
+                  2.Service details Page<ub>Under Constraction..</ub>
+                </u>
+            </marquee>
+          </div>
+          <section class="about-text">
+            <div class="about-row">
+              <p class="about-message">
+                Welcome to my portfolio website..!
+              </p>
+              <!-- Availability Badge Section -->
+              <div class="availability-badge">
+                <span class="status-dot"></span>
+                  Available For Hire
+              </div>
+            </div>
+          </section>
+
+          <!--recent work-->
+        <section class="projects-complete" id="project-complelte">
+          <h3 class="h3 article-title">What I do today?</h3>
+          <h2 class="heading">Recently Complete</h2>
+          <div class="project-card">
+              <h3>2FA Authentication Application</h3>
+              <p>A secure web application that implements user registration and Two‑Factor Authentication (2FA) 
+                using TOTP (Time‑based One‑Time Password) compatible with standard authenticator apps 
+                (Google Authenticator, Authy, etc.).
+              </p>
+              <div class="tech-used">
+                  <span class="skill-icon react">React</span>
+                  <span class="skill-icon vue3">Vue3</span>
+                  <span class="skill-icon python">Python</span>
+                  <span class="skill-icon unicorn">Uvicorn</span>
+                  <span class="skill-icon mysql">MySQL</span>
+                  <span class="skill-icon fastapi">FastAPI</span>
+              </div>
+          </div>
+          <!-- Add more project cards -->
+        </section>
+
+            <!-- In Progress Projects -->
+        <section class="projects-complete" id="project-complelte">
+          <h2 class="heading">In Progress</h2>
+          <div class="project-card">
+              <h3>E-commerce Platform</h3>
+              <p>Full-stack e-commerce solution with React and Node.js</p>
+              <div class="tech-used">
+                  <span class="skill-icon react">React</span>
+                  <span class="skill-icon node">Node.js</span>
+              </div>
+          </div>
+          <!-- Add more project cards -->
+        </section>
+
+      <!--Up Coming Project-->
+      <section class="projects-in-progress">
+        <h2>up coming</h2>
+        <div class="project-card">
+            <h3>AI Chat Application</h3>
+            <p>Machine learning powered chat interface</p>
+            <div class="tech-used">
+                <span class="skill-icon python">Python</span>
+                <span class="skill-icon tensorflow">TensorFlow</span>
+            </div>
+        </div>
+        <!-- Add more project cards -->
+      </section>
+
+
+          <!--- #STATS --->
+          <section class="stats" id="stats">
+            <h2 class="h2 article-title">achievements</h2>
+              <div class="stats-section">
+                <div class="stats-container">
+                  <a class="stats-card" href="#">
+                    <div class="card-icon">
+                      <img src="./assets/images/stats-card_icon-1.png" alt="Badge icon">
+                    </div>
+                    <h2 class="h2 card-title">
+                      2+ <strong>Years of Experience</strong>
+                    </h2>
+                  </a>
+                </div>
+                <div class="stats-container">
+                  <a class="stats-card" href="https://github.com/GHOSTs-OCTOPUS?tab=repositories">
+                    <div class="card-icon">
+                      <img src="./assets/images/stats-card_icon-2.png" alt="Checkmark icon">
+                    </div>
+                    <h2 class="h2 card-title">
+                      30+ <strong>Completed Projects</strong>
+                    </h2>
+                  </a>
+                </div>
+                <div class="stats-container">
+                  <a class="stats-card" href="#">
+                    <div class="card-icon">
+                      <img src="./assets/images/stats-card_icon-3.png" alt="Peoples rating icon">
+                    </div>
+                    <h2 class="h2 card-title">
+                      10+ <strong>Happy Clients</strong>
+                    </h2>
+                  </a>
+                </div>
+                <div class="stats-container">
+                  <div class="stats-card" id="visitor-stats-card">
+                    <div class="card-icon">
+                      <img src="./assets/images/stats-card_icon-1.png" alt="Visitor icon">
+                    </div>
+                    <h2 class="h2 card-title">
+                      <span id="visitorCount">Loading...</span> <strong>Visitors</strong>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+          </section>
+
+          <!--- Awards and Recognitions --->
+          <section class="awards" id="awards">
+            <h3 class="h2 article-title">Awards and Recognitions</h3>
+            <h4 class="h4 service-title">Here are some of my awards: </h4>
+              <ul class="awards-list">
+                <!--awards-list1-->
+                <a href="https://github.com/GHOSTs-OCTOPUS/CodeCircuit-Hackathon-2K25" class="awards-card">
+                  <div class="card-icon">
+                    <img src="./assets/images/medal-outline.svg" alt="medal icon">
+                  </div>
+                  <h2 class="h1 card-title">
+                    <strong>CodeCircuit Hackthon(May2K25)-Outlier AI</strong>
+                  </h2>
+                  <ion-icon name="chevron-forward-outline">></ion-icon>
+                </a> 
+                <!--awards-list2-->
+                <a href="#"class="awards-card">
+                  <div class="card-icon">
+                    <img src="./assets/images/trophy-outline.svg" alt="Badge icon">
+                  </div>
+                  <h2 class="h2 card-title">
+                    <strong>Best Web App - Tech Competition 2023</strong>
+                  </h2>
+                  <ion-icon name="chevron-forward-outline">></ion-icon>
+                </a>
+              </ul> 
+          </section>
+
+        </article>
+
+
+        <!--- #ABOUT COMPLETE --->
+        <article class="about" data-page="about">
+          <header>
+            <h2 class="h2 article-title">About me</h2>
+            <p>
+              Who Am I..?
+            </p>
+          </header>
+          
+          <section class="about-text">
+            <p>
+              Hello! I'm Vikas Kole, a passionate freelance web developer based in Pandharpur, Maharashtra, India.
+              With expertise in creating custom websites from scratch, developing single-page applications (SPAs),
+              integrating APIs and payment gateways, and crafting intuitive UX/UI designs, I strive to bring your
+              ideas to life with clean, modern, and efficient code. I believe in delivering solutions that not only
+              meet your business needs but also create a lasting impact. My mantra, “Our Code, Your Future,” reflects
+              my commitment to building digital experiences that empower and inspire. When I’m not coding, I enjoy
+              exploring new technologies and enhancing my skills to stay at the forefront of web development trends.
+              Let’s connect and make your vision a reality!
+            </p>
+            <p>
+              My job is to build your website so that it is functional and user-friendly but at the same time attractive.
+              Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is
+              to bring
+              across your message and identity in the most creative way. I created web design for many famous brand
+              companies.
+            </p>
+          </section>
+
+
+          <!--- service --->
+          <section class="service" id="service">
+            <h3 class="h3 article-title">Our Services..</h3>
+            <p>
+              What i'm Offered:
+            </p><br>
+
+            <ul class="service-list">
+              <!--- #service-item 1 --->
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
+                </div>
+                <div class="service-content-box">
+                  <a href="./Pages/service detail.html" target="_blank">
+                    <h4 class="h4 service-item-title">Professional Portfolio Development</h4>
+                    <p class="service-item-text">
+                      Read More >>>
+                    </p>
+                  </a>
+                </div>
+              </li>
+              <!--- #service-item 2 --->
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+                </div>
+                <div class="service-content-box">
+                  <a href="./Pages/service detail.html" target="_blank">
+                    <h4 class="h4 service-item-title">Custom Website Development from scratch</h4>
+                    <p class="service-item-text">
+                      Read More >>>
+                    </p>
+                  </a>
+                </div>
+              </li>
+              <!--- #service-item 3 --->
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img src="./assets/images/icon-app.svg" alt="Web development icon" width="40">
+                </div>
+                <div class="service-content-box">
+                  <a href="./Pages/service detail.html" target="_blank">
+                    <h4 class="h4 service-item-title">E-commerce Solutions</h4>
+                    <p class="service-item-text">
+                      Read More >>>
+                    </p>
+                  </a>
+                </div>
+              </li>
+              <!--- #service-item 4 --->
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
+                </div>
+                <div class="service-content-box">
+                  <a href="./Pages/service detail.html" target="_blank">
+                    <h4 class="h4 service-item-title">Modern UI/UX Design</h4>
+                    <p class="service-item-text">
+                      Read More >>>
+                    </p>
+                  </a>
+                </div>
+              </li>
+              <!--- #service-item 5 --->
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+                </div>
+                <div class="service-content-box">
+                  <a href="./Pages/service detail.html" target="_blank">
+                    <h4 class="h4 service-item-title">Website Maintenance & Support</h4>
+                    <p class="service-item-text">
+                      Read More >>>
+                    </p>
+                  </a>
+                </div>
+              </li>
+              <!--- #service-item 6 --->
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img src="./assets/images/icon-app.svg" alt="Web development icon" width="40">
+                </div>
+                <div class="service-content-box">
+                  <a href="./Pages/service detail.html" target="_blank">
+                    <h4 class="h4 service-item-title">Hosting & Domain Setup</h4>
+                    <p class="service-item-text">
+                      Read More >>>
+                    </p>
+                  </a>
+                </div>
+              </li>
+              <!--- #service-item 7 --->
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img src="./assets/images/icon-design.svg" alt="Web development icon" width="40">
+                </div>
+                <div class="service-content-box">
+                  <a href="./Pages/service detail.html" target="_blank">
+                    <h4 class="h4 service-item-title">Testing and Debugging</h4>
+                      <p class="service-item-text">
+                        Read More >>>
+                      </p>
+                  </a>
+                </div>
+                </a>
+              </li>
+              <!--- #service-item 8 --->
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+                </div>
+                <div class="service-content-box">
+                  <a href="./Pages/service detail.html" target="_blank">
+                    <h4 class="h4 service-item-title">API Development & AI agent Integration</h4>
+                    <p class="service-item-text">
+                      Read More >>>
+                    </p>
+                  </a>
+                </div>
+              </li>
+            </ul>
+
+          </section>
+
+
+          <!--- testimonials --->
+          <section class="testimonials" id="testimonial">
+            <h3 class="h3 article-title">Testimonials</h3>
+            <p>
+              Here’s what my clients have to say about working with me:
+            </p><br>
+
+            <ul class="testimonials-list has-scrollbar">
+              <!--- testimonials-item 1 --->
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img src="./assets/images/avatar-1.png" alt="Client Review" width="60" data-testimonials-avatar>
+                  </figure>
+                  <h4 class="h4 testimonials-item-title" data-testimonials-title>Client Review</h4>
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      "Vikas Kole’s portfolio design perfectly reflects his talent and professionalism.
+                      The site is clean, responsive, and easy to navigate. It highlights his skills
+                      and projects in an impressive way, making it an excellent tool to showcase his expertise.
+                      Highly recommended for anyone looking to create a professional online presence!"
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <!--- testimonials-item 2 --->
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img src="./assets/images/avatar-2.png" alt="Happy Client" width="60" data-testimonials-avatar>
+                  </figure>
+                  <h4 class="h4 testimonials-item-title" data-testimonials-title>Happy Client</h4>
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      "Vikas delivered a fully customized website that exceeded our expectations.
+                      From concept to deployment, he ensured every detail aligned with our vision.
+                      His coding expertise and creative approach resulted in a robust, scalable,
+                      and visually appealing website. We couldn’t be happier with the outcome!"
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <!--- testimonials-item 3 --->
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img src="./assets/images/avatar-3.png" alt="Business Owner" width="60" data-testimonials-avatar>
+                  </figure>
+                  <h4 class="h4 testimonials-item-title" data-testimonials-title>Business Owner</h4>
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      "I was impressed by Vikas’s ability to create a dynamic and high-performance
+                      Single-Page Application for our business. The smooth transitions, responsive design,
+                      and fast load times significantly enhanced user engagement.
+                      His work demonstrates deep technical knowledge and attention to detail."
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <!--- testimonials-item 4 --->
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img src="./assets/images/avatar-4.png" alt="E-commerce Client" width="60" data-testimonials-avatar>
+                  </figure>
+                  <h4 class="h4 testimonials-item-title" data-testimonials-title>E-commerce Client</h4>
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      "Vikas streamlined our operations by integrating secure payment gateways and building APIs tailored
+                      to our needs. The process was smooth, and he ensured everything worked flawlessly.
+                      His expertise saved us time and boosted our business efficiency."
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <!--- testimonials-item 5 --->
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img src="./assets/images/avatar-2.png" alt="Startup Founder" width="60" data-testimonials-avatar>
+                  </figure>
+                  <h4 class="h4 testimonials-item-title" data-testimonials-title>Startup Founder</h4>
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      "Vikas Kole has a remarkable eye for design.
+                      He transformed our ideas into a visually stunning and user-friendly interface.
+                      His designs improved user engagement and provided an intuitive experience for our customers.
+                      Truly exceptional work!"
+                    </p>
+                  </div>
+                </div>
+
+            </ul>
+
+          </section>
+
+
+          <!--- testimonials modal --->
+          <div class="modal-container" data-modal-container>
+            <div class="overlay" data-overlay></div>
+            <section class="testimonials-modal">
+              <button class="modal-close-btn" data-modal-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+              <div class="modal-img-wrapper">
+                <figure class="modal-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+                </figure>
+                <img src="./assets/images/icon-quote.svg" alt="quote icon">
+              </div>
+              <div class="modal-content">
+                <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+                <div data-modal-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+              </div>
+
+            </section>
+
+          </div>
+
+        </article>
+
+
+        <!--- #RESUME COMPLETE --->
+        <article class="resume" data-page="resume">
+          <header>
+            <h2 class="h2 article-title">Resume</h2>
+          </header>
+          <h3 class="h3 article-title">My Journey..</h3>
+          <section class="timeline">
+            <!--- #Experience --->
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+              <h3 class="h3">Experience</h3>
+            </div>
+            <ol class="timeline-list">
+              <!--- #Experience Item 1 --->
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title"> Intern <p>VERZEO Edutech Private Limited,Pune.</p>
+                </h4>
+                <span>October 2022 - November 2022 <br> COMPLETE </span>
+                <p class="timeline-text">
+                  During my cybersecurity internship, I was responsible for supporting the team in various security
+                  operations. I assisted in monitoring security systems, analysing logs for suspicious activity, and
+                  responding to incidents promptly. I also gained hands-on experience with tools like Nessus and Metasploit,
+                  deepening my understanding of cybersecurity concepts such as threat detection, risk assessment, and
+                  incident response. Throughout the internship, I actively participated in security awareness initiatives,
+                  helping to educate employees about cybersecurity best practices and reinforcing a culture of vigilance
+                  against social engineering attacks.
+                </p>
+              </li>
+              <!--- #Experience Item 2 --->
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Freelancer Web Developer </h4>
+                <span>December 2023 - Onward </span>
+
+                <p class="timeline-text">
+                  Specializes in custom website development and single-page applications (SPAs) to deliver responsive and
+                  user-friendly designs.
+                  Expertise in API development and payment gateway integration to create seamless web experiences.
+                  Focuses on modern UX/UI design principles to enhance usability and engagement.
+                  Provides professional services tailored to client needs, ensuring high-quality code and performance
+                  optimization.
+                </p>
+              </li>
+              <!--- #Experience Item 3 --->
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title"> frontend-project developer <p>Outlier AI </p>
+                </h4>
+                <span>Starting May 25, 2025 </span>
+                <p class="timeline-text">
+                  As a Freelance Frontend Developer at Outlier AI, I design and develop responsive, user-friendly interfaces for AI-driven applications. 
+                  My work includes collaborating with cross-functional teams to implement scalable frontend solutions using modern frameworks like React.js or Vue.js, ensuring seamless integration with backend AI systems. 
+                  I focus on optimizing performance, accessibility, and UX/UI design to enhance user engagement with cutting-edge AI tools.<br>
+                  Key Contributions:
+                  <p>- Built interactive dashboards for data visualization.</p>
+                  <p>- Improved frontend efficiency and load times.</p>
+                  <p>- Ensured cross-browser compatibility and mobile responsiveness.</p>
+                  Excited to contribute to innovative AI projects at Outlier AI! 🚀
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <!--- #Education --->
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+              <h3 class="h3">Education</h3>
+            </div>
+          <ol class="timeline-list">
+            <!--- #Education Item 1 --->
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title"> B.Tech CSE <p>Tatyasaheb Kore Institute Of Engineering And Technology,
+                    Warananagar 416113. </p>
+                </h4>
+                <span>2021 — 2024</span>
+                <p class="timeline-text">
+                  Pursuing a Bachelor of Technology in Computer Science and Engineering with a focus on software
+                  development, web technologies, and cybersecurity.
+                  <a>Key subjects include Data Structures, Database Management Systems, Computer Networking, Software
+                    Design, and Network Security.</a>
+                  Practical experience in programming languages such as Python, C, C++, PHP, Rust, and JavaScript.
+                </p>
+              </li>
+              <!--- #Education Item 2 --->
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title"> Class XII (Senior Secondary) <p>Maharashtra State Board</p>
+                </h4>
+                <span>2019 — 2020</span>
+                <p class="timeline-text">
+                  Studied core subjects with an emphasis on logical reasoning, mathematics, and programming fundamentals.
+                </p>
+              </li>
+              <!--- #Education Item 3 --->
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title"> Class X (Secondary School) <p>Maharashtra State Board</p>
+                </h4>
+                <span>2017 — 2018</span>
+                <p class="timeline-text">
+                  Focused on foundational subjects including mathematics, science, and technology.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <!-- Skills Section --> 
+          <section class="skills">
+            <h3 class="h2 article-title">Technical Skills</h3>
+              <div class="skills-section ">
+                <div class="skills-container">
+                  <h4 class="h4 service-title" >Languages</h4>
+                    <span class="skill-icon clan">C language</span>
+                    <span class="skill-icon clans">C++ language</span>
+                    <span class="skill-icon html">HTML</span>
+                    <span class="skill-icon css">CSS</span>
+                    <span class="skill-icon js">JavaScript</span>
+                    <span class="skill-icon react">React</span>
+                    <span class="skill-icon bootstrap">Bootstrap</span>
+                    <span class="skill-icon python"> Python</span>
+                    <span class="skill-icon php"> Php</span>
+                    <span class="skill-icon mysql">MySQL</span>
+                </div>
+                <div class="skills-container">
+                  <h4 class="h4 service-title">Tools</h4>
+                    <span class="skill-icon git">Git</span>
+                    <span class="skill-icon github">GitHub</span>
+                    <span class="skill-icon vs-code">VS Code</span>
+                    <span class="skill-icon figma">Figma</span>
+                    <span class="skill-icon versal">Versal</span>
+                    <span class="skill-icon netlify">Netlify</span>
+                    <span class="skill-icon firebase">Firebase</span>
+                </div>
+              </div>
+              <!-- Add more categories -->
+          </section>
+
+          <!--- #My expert --->
+          <section class="expert">
+            <h3 class="h2 article-title">My Experties..</h3>
+            <section class="expert-text">
+              <p>
+                Hear are some My Expert Area:  
+              </p>
+          </section>
+            <ul class="expert-list content-card">
+              <!--- #expert-item 1 --->
+              <li class="expert-item">
+                <div class="title-wrapper">
+                  <h5 class="h5"> Professional Portfolio design</h5>
+                  <data value="80">80%</data>
+                </div>
+                <div class="expert-progress-bg">
+                  <div class="expert-progress-fill" style="width: 80%;"></div>
+                </div>
+              </li>
+              <!--- #expert-item 2 --->
+              <li class="expert-item">
+                <div class="title-wrapper">
+                  <h5 class="h5"> Custom Website Development</h5>
+                  <data value="35">35%</data>
+                </div>
+                <div class="expert-progress-bg">
+                  <div class="expert-progress-fill" style="width: 35%;"></div>
+                </div>
+              </li>
+              <!--- #expert-item 3 --->
+              <li class="expert-item">
+                <div class="title-wrapper">
+                  <h5 class="h5"> E-commerce Solutions</h5>
+                  <data value="70">70%</data>
+                </div>
+                <div class="expert-progress-bg">
+                  <div class="expert-progress-fill" style="width: 70%;"></div>
+                </div>
+              </li>
+              <!--- #expert-item 4 --->
+              <li class="expert-item">
+                <div class="title-wrapper">
+                  <h5 class="h5"> Modern UX/UIDesign</h5>
+                  <data value="30">30%</data>
+                </div>
+                <div class="expert-progress-bg">
+                  <div class="expert-progress-fill" style="width: 30%;"></div>
+                </div>
+              </li>
+              <!--- #expert-item 5 --->
+              <li class="expert-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">API Development & payment Integration
+                  </h5>
+                  <data value="20">20%</data>
+                </div>
+                <div class="expert-progress-bg">
+                  <div class="expert-progress-fill" style="width: 20%;"></div>
+                </div>
+              </li>
+              <!--- #expert-item 6 --->
+              <li class="expert-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Git & GitHub</h5>
+                  <data value="90">90%</data>
+                </div>
+                <div class="expert-progress-bg">
+                  <div class="expert-progress-fill" style="width: 90%;"></div>
+                </div>
+              </li>
+              <!--- #expert-item 7 --->
+              <li class="expert-item">
+                <div class="title-wrapper">
+                  <h5 class="h5"> Hosting & Domain Setup</h5>
+                  <data value="80">80%</data>
+                </div>
+                <div class="expert-progress-bg">
+                  <div class="expert-progress-fill" style="width: 80%;"></div>
+                </div>
+              </li>
+              <!--- #expert-item 7 --->
+              <li class="expert-item">
+                <div class="title-wrapper">
+                  <h5 class="h5"> Maintenance & Support</h5>
+                  <data value="60">60%</data>
+                </div>
+                <div class="expert-progress-bg">
+                  <div class="expert-progress-fill" style="width: 60%;"></div>
+                </div>
+              </li>
+            </ul>
+
+          </section>
+
+        </article>
+
+
+        <!--- #PORTFOLIO --->
+        <article class="portfolio" data-page="portfolio">
+          <header>
+            <h2 class="h2 article-title">Portfolio</h2>
+          </header>
+          <section class="projects">
+            <!--- #filter-list --->
+            <ul class="filter-list">
+              <li class="filter-item">
+                <button class="active" data-filter-btn>All</button>
+              <li class="filter-item">
+                <button data-filter-btn>Personal Project</button>
+              </li>
+              <li class="filter-item">
+                <button data-filter-btn>Client Project</button>
+              </li>
+              <li class="filter-item">
+                <button data-filter-btn>Other</button>
+              </li>
+            </ul>
+
+            <div class="filter-select-box">
+              <button class="filter-select" data-select>
+                <div class="select-value" data-selecct-value>Select category</div>
+                <div class="select-icon">
+                  <ion-icon name="chevron-down"></ion-icon>
+                </div>
+              </button>
+              <ul class="select-list">
+                <li class="select-item">
+                  <button data-select-item>All</button>
+                </li>
+                <li class="select-item">
+                  <button data-select-item>Personal Project</button>
+                </li>
+                <li class="select-item">
+                  <button data-select-item>Client Project</button>
+                </li>
+                <li class="select-item">
+                  <button data-select-item>Other</button>
+                </li>
+              </ul>
+            </div>
+
+            </ul>
+            <!--- #Project list --->
+            <ul class="project-list">
+              <!--- project-item 1 --->
+              <li class="project-item  active" data-filter-item data-category="personal project">
+                <a href="https://ghosts-octopus.github.io/Portfolio-Website/" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/project-1.png" alt="Portfolio-Website" loading="lazy">
+                  </figure>
+                  <h3 class="project-title">Portfolio Website </h3>
+                  <p class="project-category">Web development <br>Complete.</p>
+                </a>
+              </li>
+              <!--- project-item 2 --->
+              <li class="project-item  active" data-filter-item data-category="personal project">
+                <a href="https://github.com/GHOSTs-OCTOPUS/Online-Doctor-Appointment-System" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/project-2.png" alt="doctor-appointment-system" loading="lazy">
+                  </figure>
+                  <h3 class="project-title">Online Doctor's Appoinment System. </h3>
+                  <p class="project-category">Web Application <br>Complete.</p>
+                </a>
+              </li>
+              <!--- project-item 3 --->
+              <li class="project-item  active" data-filter-item data-category="client project">
+                <a href="https://github.com/GHOSTs-OCTOPUS/Loan-Status-Prediction-Using-SVM-" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/project-3.png" alt="Loan-Status-Prediction-Using-SVM" loading="lazy">
+                  </figure>
+                  <h3 class="project-title">Loan-Status-Prediction-Using-SVM</h3>
+                  <p class="project-category">Web Applications <br>Complete.</p>
+                </a>
+              </li>
+              <!--- project-item 4 --->
+              <li class="project-item  active" data-filter-item data-category="other">
+                <a href="https://github.com/GHOSTs-OCTOPUS/Phonebook-C-Project" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img src=".\assets\images\project-4.JPG" alt="phonebook" loading="lazy">
+                  </figure>
+                  <h3 class="project-title">Phonebook-C-Project</h3>
+                  <p class="project-category">Application<br>Complete.</p>
+                </a>
+              </li>
+              <!--- project-item 5 --->
+              <li class="project-item  active" data-filter-item data-category="personal project">
+                <a href="https://github.com/GHOSTs-OCTOPUS/APPLICATION-OF-BANK-MANAGEMENT-SYSTEM-USING-C-LANG" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/project-5.png" alt="bank-system" loading="lazy">
+                  </figure>
+                  <h3 class="project-title">Application-Of-Back-Management-System-Using-C-Lang.</h3>
+                  <p class="project-category">Application<br>Complete.</p>
+                </a>
+              </li>
+              <!--- project-item 6 --->
+              <li class="project-item  active" data-filter-item data-category="other">
+                <a href="https://ghosts-octopus.github.io/Tetris-Game/" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/project-6.png" alt="Tetris-Game" loading="lazy">
+                  </figure>
+                  <h3 class="project-title">Tetris-Game</h3>
+                  <p class="project-category">Web Game<br>Complete.</p>
+                </a>
+              </li>
+              <!--- project-item 7 --
+              <!--<li class="project-item  active" data-filter-item data-category="other">
+                <a href="https://github.com/GHOSTs-OCTOPUS/smoke-effect-on-Name" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/project-7.png" alt="smoke-effect-on-name" loading="lazy">
+                  </figure>
+                  <h3 class="project-title">Smoke-effect-on-Name</h3>
+                  <p class="project-category">Other<br>Complete.</p>
+                </a>
+              </li>--->
+              <!--- project-item 8 --->
+              <li class="project-item  active" data-filter-item data-category="other">
+                <a href="https://github.com/GHOST-OCTOPUS/keylogger" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/project-8.jpg" alt="keylogger" loading="lazy">
+                  </figure>
+                  <h3 class="project-title">keylogger</h3>
+                  <p class="project-category">Security Tool<br>Fork By..</p>
+                </a>
+              </li>
+              <!--- project-item 9 --->
+              <li class="project-item  active" data-filter-item data-category="client project">
+                <a href="https://github.com/GHOSTs-OCTOPUS/LMS-Library-Management-System-master" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/project-9.png" alt="LMS-Library-Management-System-master" loading="lazy">
+                  </figure>
+                  <h3 class="project-title">Library-Management-System</h3>
+                  <p class="project-category">Application<br>Complete</p>
+                </a>
+              </li>
+              <!--- project-item 10 --->
+              <li class="project-item  active" data-filter-item data-category="client project">
+                <a href="https://github.com/GHOSTs-OCTOPUS/CLIENT01_secure-cookie-reporting-webpage-project" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/project-10.jpg" alt="secure-cookie-reporting-webpage-project" loading="lazy">
+                  </figure>
+                  <h3 class="project-title">Secure-Cookie-Reporting-Webpage-Project</h3>
+                  <p class="project-category">Web Applications <br>Complete.</p>
+                </a>
+              </li>
+              <!--- project-item 11 --->
+              <li class="project-item  active" data-filter-item data-category="client project">
+                <a href="https://madhurianalytics.netlify.app/" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/project-11.jpg" alt="Big-data-analyst" loading="lazy">
+                  </figure>
+                  <h3 class="project-title">Big-data-analyst-profile</h3>
+                  <p class="project-category">Portfolio<br>Complete.</p>
+                </a>
+              </li>
+              <!--- project-item 12 --->
+              <li class="project-item  active" data-filter-item data-category="personal project">
+                <a href="https://ghosts-octopus.github.io/Typing-Speed-Test/" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/project-12.png" alt="Typing-Speed-Test" loading="lazy">
+                  </figure>
+                  <h3 class="project-title">Typing-Speed-Test</h3>
+                  <p class="project-category">Web Application<br>Complete.</p>
+                </a>
+              </li>
+              <!--- project-item 13 --->
+              <li class="project-item  active" data-filter-item data-category="client project">
+                <a href="https://github.com/GHOSTs-OCTOPUS" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/2FA Authentication Application.jpg" alt="HAckathon" loading="lazy">
+                  </figure>
+                  <h3 class="project-title">2FA Authentication Application </h3>
+                  <p class="project-category">Web development <br>Complete.</p>
+                </a>
+              </li>
+            </ul>
+
+            <div class="viewall-section">
+              <small class="message">
+                For more projects, visit our GitHub account (<strong>GHOST's-OCTOPUS</strong>).<br>
+                By click on View All.>>>
+              </small>
+              <div class="viewall">
+                <a href="https://github.com/GHOSTs-OCTOPUS?tab=repositories" class="btn" target="_blank">
+                  <span>View All</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+
+          </section>
+
+        </article>
+
+
+        <!--- #CONTACT COMPLETE --->
+        <article class="contact" data-page="contact">
+          <header>
+            <h2 class="h2 article-title">Contact</h2>
+          </header>
+          <section class="contact-form">
+            <div class="visme_d" data-title="Sample Custom Form" data-url="rxw6pw08-sample-custom-form" data-domain="forms" data-full-page="false" data-min-height="500px" data-form-id="119618"></div> 
+            <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script> 
+            <h3 class="h3 form-title">For Hire Me..! <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width=28px></h3>
+              <section class="about-text">
+                <p>
+                  Fill Out The Form..
+                </p>
+              </section>          
+            <form action="https://api.web3forms.com/submit" method="POST" class="form" data-form>
+              <!-- Web3forms requires access_key field in payload -->
+              <input type="hidden" name="access_key" value="65af3bff-3bec-4a55-97be-26e2f41a522b" />
+              <!-- Optional redirect or subject fields can be added -->
+              <input type="hidden" name="subject" value="Portfolio Contact Form" />
+              
+              <div class="input-wrapper">
+                <input type="text" name="fullname" class="form-input" placeholder="Full name" autocomplete="off" required data-form-input>
+                <input type="email" name="email" class="form-input" placeholder="Email address" autocomplete="off" required data-form-input>
+                <input type="text" name="phone number" class="form-input" placeholder="phone number with country code" autocomplete="off" required data-form-input>
+                <input type="text" name="subject" class="form-input" placeholder="subject" autocomplete="off" required data-form-input>
+              </div>
+              <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+              <!-- File upload optional (single file) -->
+              <div class="file-upload-wrapper">
+                <label for="fileInput" class="file-attach-btn">
+                  <ion-icon name="attach-outline"></ion-icon>
+                  <span>Attach file (optional)</span>
+                  <input id="fileInput" name="attachment" type="file" accept="image/*,.pdf,.doc,.docx" />
+                </label>
+
+                <div id="filePreview" class="file-preview" hidden>
+                  <span id="fileName"></span>
+                  <button type="button" id="removeFileBtn" class="remove-file-btn" aria-label="Remove attached file">✕</button>
+                </div>
+              </div>
+
+                <!-- Progress bar / status -->
+                <div id="uploadStatus" class="upload-status" hidden>
+                  <div class="upload-text">Uploading... <span id="uploadPercent">0%</span></div>
+                  <div class="upload-bar">
+                    <div id="uploadBarFill" class="upload-bar-fill" style="width: 0%"></div>
+                  </div>
+                </div>
+
+              <button class="form-btn" type="submit" disabled data-form-btn>
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Send Message</span>
+              </button>
+
+            </form>
+
+          </section>
+
+        </article>
+
+
+      </div>
+
+    </main>
+
+    <!--- #FOOTER COMPLETE --->
+    <footer class="footer">
+      <small class="message">Thanks for visiting to ME and happy coding...<b>❤</b></small>
+      <small class="copyright">&copy; Developed By <b>GHOSTs-OCTOPUS</b>. Updated on <b>November12 2025</b>. All rights reserved.</small>
+    </footer>
+
+    <!--- custom js link --->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/script.js"></script>
+    <script type="module" src="./assets/js/visitor-counter.js"></script>
+
+    <!--- ionicon link --->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  </body>
+
+</html>

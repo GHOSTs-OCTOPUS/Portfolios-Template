@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio V1 | Freelancer Web Developer</title>
+    <!--- favicon --->
+    <link rel="shortcut icon" href="./assets/images/logo 1.webp" type="image/x-icon">
+
+    <!--- custom css link --->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!--- google font link --->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+
+  </head>
+
+  <body>
+    
+    <!--- #MAIN --->
+    <main>
+      <!--- #SIDEBAR COMPLETE --->
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img src="../assets/images/myavatar.png" alt="Vikas Kole." width="80">
+          </figure>
+          <div class="info-content">
+            <h1 class="name" title="Vikas Kole">Vikas Kole.</h1>
+            <p class="title">Freelancer Web Developer</p><br>
+            <p class="title">UI/UX Designer</p><br>
+            <!--<p class="title">GrayHat-Hacker</p>-->
+          </div>
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
+
+        <!--- #SIDEBAR INFO --->
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+          <ul class="contacts-list">
+              <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="document-text-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">CV.devloper >></p>
+                <a href="./assets/images/VIKAS KOLE 20250824.pdf" class="contact-link">Download</a>
+                <p class="contact-title">CV.hacker >></p>
+                <a href="./assets/images/VIKAS_KOLE_CyberSecurity.pdf" class="contact-link">Download</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+                <a href="mailto:kolevikasxyz@gmail.com" class="contact-link">kolevikasxyz@gmail.com</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+                <a href="tel:+917219447058" class="contact-link">+91 7219447058</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+                <address>Pandharpur, MH, India</address>
+              </div>
+            </li>
+          </ul>
+
+          <!--- #SIDEBAR SOCIAL LINK --->
+          <div class="separator"></div>
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="https://github.com/GHOSTs-OCTOPUS" class="social-link" target="_blank">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>  
+            <li class="social-item">
+              <a href="https://www.linkedin.com/in/vikas-kole-vk786" class="social-link" target="_blank">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="https://www.instagram.com/kolevikki786" class="social-link" target="_blank">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!--- #main-content Complete --->
+      <div class="main-content">
+        <!--- #NAVBAR COMPLETE --->
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link><a href="../index.html" style="color:whitesmoke">Home</a></button>
+            </li>
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link>service details</button>
+            </li>
+          </ul>
+        </nav>
+        <!-- #service details INCOMPLELE --> 
+        <article class="details active " data-page="home">
+          <header>
+            <h2 class="h2 article-title">Service Details..!</h2>
+              <div class="about-row">
+                  <p class="about-message">
+                  Welcome to my Service details..!
+                  </p>
+              </div>
+              <div class="movingText">
+                  <marquee>
+                      <B>Important Information >>></B>
+                          <u>1. Portfolio Under Development..  
+                            2.Service details Page<ub>Under Constraction..</ub>
+                          </u>
+                  </marquee>
+              </div>        
+          </header>
+        </article>
+      </div>
+    </main>
+
+    <!--- #FOOTER COMPLETE --->
+    <footer class="footer">
+      <small class="message">Thanks for visiting to ME and happy coding...<b>❤</b></small>
+      <small class="copyright">&copy; Developed By <b>GHOSTs-OCTOPUS</b>. Updated on <b>November12 2025</b>. All rights reserved.</small>
+    </footer>
+
+    <!--- custom js link --->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/script.js"></script>
+
+    <!--- ionicon link --->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  </body>
+
+</html>
