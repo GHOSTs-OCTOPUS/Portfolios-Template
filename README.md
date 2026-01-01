@@ -17,5 +17,5 @@ A curated collection of **demo portfolio websites** I've built, showcasing diffe
 
 ---
 Credit: [kole vikas](https://github.com/GHOSTs-OCTOPUS)<BR>
-Last Edited on: 31/12/2025.
+Last Edited on: 31/12/2025
 
