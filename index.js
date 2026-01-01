@@ -10,8 +10,7 @@ const folderStructure = {
   "Portfolio-V3": ["index.html"],
   "Portfolio-V4": ["index.html"],
   "Portfolio-Website": ["index.html"],
-  "Unika - Responsive One Page HTML5 Template": ["index.html"],
-  "videograph-master": ["index.html"]
+  "Unika - Responsive One Page HTML5 Template": ["index.html"]
 };
 
 // -------------------------------
